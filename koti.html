@@ -1,0 +1,1302 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JAMI Wedding Invitation</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Normal Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #180015;
+            color: white;
+            overflow-x: hidden;
+        }
+
+
+        /* =================================
+           NAVBAR
+        ================================= */
+
+        .navbar {
+            background: rgba(20, 0, 18, 0.75);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            z-index: 9999;
+        }
+
+        .navbar-brand {
+            font-size: 25px;
+            font-weight: 700;
+            color: #ffb6d5 !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin: 0 7px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ff72a8 !important;
+            transform: translateY(-2px);
+        }
+
+
+        /* =================================
+           COMMON SECTION
+        ================================= */
+
+        section {
+            min-height: 100vh;
+            padding: 120px 20px 70px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content {
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .heading {
+            font-size: 52px;
+            font-weight: 600;
+            color: #ffd5e5;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            color: #ffabc9;
+            letter-spacing: 4px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .heart-line {
+            color: #ff4f91;
+            font-size: 22px;
+            letter-spacing: 8px;
+            margin: 20px 0;
+            animation: glow 1.5s infinite alternate;
+        }
+
+
+        /* =================================
+           PAGE 1
+        ================================= */
+
+        #home {
+            background:
+                radial-gradient(
+                    circle at 50% 10%,
+                    #7b2357,
+                    #3c092e 45%,
+                    #10000d
+                );
+        }
+
+        .home-card {
+            width: 720px;
+            max-width: 95%;
+            margin: auto;
+
+            padding: 55px 35px;
+
+            background: rgba(255,255,255,0.09);
+
+            border: 1px solid rgba(255,255,255,0.25);
+
+            border-radius: 30px;
+
+            backdrop-filter: blur(20px);
+
+            box-shadow:
+                0 30px 90px rgba(0,0,0,0.5);
+
+            animation: cardEnter 1.3s ease;
+        }
+
+        .ring {
+            font-size: 60px;
+            animation: rotate 5s linear infinite;
+        }
+
+        .jami {
+            font-size: 65px;
+            font-weight: 700;
+            color: #ffd2e1;
+            text-shadow:
+                0 0 20px rgba(255,80,150,0.8);
+        }
+
+        .wedding-title {
+            font-size: 27px;
+            font-weight: 500;
+        }
+
+        .welcome {
+            max-width: 550px;
+            margin: 25px auto;
+            line-height: 1.9;
+            color: #f5dce7;
+        }
+
+        .couple {
+            font-size: 40px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .couple span {
+            color: #ff5797;
+            display: inline-block;
+            animation: heartbeat 1s infinite;
+        }
+
+        .date {
+            font-size: 20px;
+            letter-spacing: 4px;
+            color: #ffc5d8;
+            margin-top: 20px;
+        }
+
+        .place {
+            color: #eac6d4;
+        }
+
+
+        /* =================================
+           BUTTON
+        ================================= */
+
+        .wedding-btn {
+            margin-top: 25px;
+            padding: 13px 30px;
+
+            border: none;
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    45deg,
+                    #ff3f88,
+                    #c51d69
+                );
+
+            color: white;
+            font-weight: 600;
+
+            box-shadow:
+                0 10px 30px rgba(255,50,130,0.4);
+
+            transition: 0.4s;
+        }
+
+        .wedding-btn:hover {
+            color: white;
+            transform: translateY(-5px) scale(1.05);
+
+            box-shadow:
+                0 15px 45px rgba(255,60,140,0.7);
+        }
+
+
+        /* =================================
+           PAGE 2
+        ================================= */
+
+        #story {
+            background:
+                linear-gradient(
+                    135deg,
+                    #52163f,
+                    #190014
+                );
+        }
+
+        .story-card {
+            max-width: 850px;
+            margin: 35px auto;
+
+            padding: 45px;
+
+            border-radius: 30px;
+
+            background: rgba(255,255,255,0.08);
+
+            border:
+                1px solid rgba(255,255,255,0.2);
+
+            backdrop-filter: blur(15px);
+
+            box-shadow:
+                0 20px 70px rgba(0,0,0,0.4);
+
+            transition: 0.5s;
+        }
+
+        .story-card:hover {
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 30px 80px rgba(255,60,140,0.25);
+        }
+
+        .heart-icon {
+            font-size: 80px;
+            animation: heartbeat 1.2s infinite;
+        }
+
+        .story-card h2 {
+            font-size: 34px;
+            color: #ffc1d8;
+            margin: 20px 0;
+        }
+
+        .story-card p {
+            color: #f3dbe5;
+            line-height: 2;
+            font-size: 16px;
+        }
+
+
+        /* =================================
+           PAGE 3
+        ================================= */
+
+        #details {
+            background:
+                radial-gradient(
+                    circle at center,
+                    #70264f,
+                    #170012
+                );
+        }
+
+        .detail-card {
+            height: 270px;
+
+            padding: 35px 20px;
+
+            border-radius: 25px;
+
+            background: rgba(255,255,255,0.08);
+
+            border:
+                1px solid rgba(255,255,255,0.2);
+
+            backdrop-filter: blur(15px);
+
+            transition: 0.5s;
+        }
+
+        .detail-card:hover {
+            transform:
+                translateY(-15px)
+                scale(1.03);
+
+            box-shadow:
+                0 20px 55px
+                rgba(255,60,140,0.35);
+        }
+
+        .detail-icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .detail-card h3 {
+            color: #ffb3cc;
+            font-size: 23px;
+        }
+
+        .detail-card p {
+            font-size: 24px;
+            margin: 12px 0;
+        }
+
+        .detail-card small {
+            color: #e7c5d3;
+        }
+
+        .family-card {
+            max-width: 850px;
+            margin: 45px auto 0;
+
+            padding: 40px;
+
+            border-radius: 30px;
+
+            background: rgba(255,255,255,0.08);
+
+            border:
+                1px solid rgba(255,255,255,0.2);
+
+            backdrop-filter: blur(15px);
+        }
+
+        .family-card h3 {
+            color: #ffc0d7;
+        }
+
+        .family-heart {
+            font-size: 60px;
+            animation: heartbeat 1.1s infinite;
+        }
+
+
+        /* =================================
+           PAGE 4
+        ================================= */
+
+        #celebration {
+            background:
+                linear-gradient(
+                    135deg,
+                    #160013,
+                    #641c49,
+                    #220016
+                );
+        }
+
+        .celebration-card {
+            max-width: 700px;
+            margin: 30px auto;
+
+            padding: 50px 30px;
+
+            border-radius: 35px;
+
+            background: rgba(255,255,255,0.09);
+
+            border:
+                1px solid rgba(255,255,255,0.25);
+
+            backdrop-filter: blur(20px);
+
+            box-shadow:
+                0 30px 100px rgba(0,0,0,0.5);
+        }
+
+        .main-heart {
+            font-size: 110px;
+            animation: heartbeat 1.2s infinite;
+        }
+
+        .celebration-card h2 {
+            font-size: 28px;
+            color: #ffc3d8;
+        }
+
+        .celebration-card h3 {
+            font-size: 42px;
+            color: #ffb2ce;
+            margin: 20px 0;
+        }
+
+        .date-box {
+            max-width: 400px;
+            margin: 25px auto;
+
+            padding: 18px;
+
+            border-top: 1px solid #ff8db5;
+            border-bottom: 1px solid #ff8db5;
+        }
+
+        #message {
+            color: #ffd2df;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+
+        /* =================================
+           FLOATING HEART BACKGROUND
+        ================================= */
+
+        #hearts {
+            position: fixed;
+            inset: 0;
+
+            pointer-events: none;
+
+            overflow: hidden;
+
+            z-index: 2;
+        }
+
+        .floating-heart {
+            position: absolute;
+
+            bottom: -40px;
+
+            color: #ff5d9b;
+
+            opacity: 0.7;
+
+            animation:
+                floatUp linear forwards;
+        }
+
+
+        /* =================================
+           CONFETTI
+        ================================= */
+
+        .confetti {
+            position: fixed;
+
+            top: -30px;
+
+            font-size: 22px;
+
+            z-index: 99999;
+
+            animation:
+                fall linear forwards;
+
+            pointer-events: none;
+        }
+
+
+        /* =================================
+           ANIMATIONS
+        ================================= */
+
+        @keyframes cardEnter {
+
+            from {
+                opacity: 0;
+                transform:
+                    scale(0.7)
+                    translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform:
+                    scale(1)
+                    translateY(0);
+            }
+        }
+
+        @keyframes rotate {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes heartbeat {
+
+            0%,100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes glow {
+
+            from {
+                text-shadow:
+                    0 0 5px #ff4f91;
+            }
+
+            to {
+                text-shadow:
+                    0 0 20px #ff4f91,
+                    0 0 40px #ff4f91;
+            }
+        }
+
+        @keyframes floatUp {
+
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg);
+
+                opacity: 0;
+            }
+        }
+
+        @keyframes fall {
+
+            to {
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =================================
+           MOBILE
+        ================================= */
+
+        @media(max-width:600px) {
+
+            .jami {
+                font-size: 48px;
+            }
+
+            .heading {
+                font-size: 38px;
+            }
+
+            .couple {
+                font-size: 29px;
+            }
+
+            .home-card {
+                padding: 40px 20px;
+            }
+
+            .story-card {
+                padding: 30px 20px;
+            }
+
+            .celebration-card {
+                padding: 35px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     ANIMATED HEART BACKGROUND
+====================================== -->
+
+<div id="hearts"></div>
+
+
+<!-- =====================================
+     NAVIGATION
+====================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#home">
+            💍 JAMI
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarMenu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#story">
+                        Our Story
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#details">
+                        Details
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#celebration">
+                        Celebration
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================
+     PAGE 1
+====================================== -->
+
+<section id="home">
+
+    <div class="content">
+
+        <div class="home-card">
+
+            <div class="ring">
+                💍
+            </div>
+
+            <p class="subtitle">
+                A HEARTFELT WELCOME
+            </p>
+
+            <h1 class="jami">
+                JAMI
+            </h1>
+
+            <h2 class="wedding-title">
+                Wedding Invitation
+            </h2>
+
+            <div class="heart-line">
+                ♥ ♥ ♥
+            </div>
+
+            <p class="welcome">
+
+                With hearts full of happiness,
+                love and joy, we warmly invite you
+                to celebrate a beautiful and memorable
+                occasion with us.
+
+            </p>
+
+            <h2 class="couple">
+
+                KOTI
+                <span>♥</span>
+                RADHIKA
+
+            </h2>
+
+            <p class="date">
+                26 • 06 • 2001
+            </p>
+
+            <p class="place">
+                📍 Tanuku
+            </p>
+
+            <button
+                class="btn wedding-btn"
+                onclick="openInvitation()">
+
+                Open Invitation 💌
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PAGE 2
+====================================== -->
+
+<section id="story">
+
+    <div class="content">
+
+        <p class="subtitle">
+            TWO HEARTS • ONE JOURNEY
+        </p>
+
+        <h1 class="heading">
+            Our Beautiful Beginning
+        </h1>
+
+        <div class="heart-line">
+            ♥ ♥ ♥
+        </div>
+
+
+        <div class="story-card">
+
+            <div class="heart-icon">
+                ❤️
+            </div>
+
+            <h2>
+                Koti & Radhika
+            </h2>
+
+            <p>
+
+                Every beautiful story begins with
+                a special moment.
+
+            </p>
+
+            <p>
+
+                Today marks the beginning of
+                a wonderful new chapter filled
+                with love, happiness, friendship
+                and togetherness.
+
+            </p>
+
+            <p>
+
+                With the blessings of our families
+                and the love of our dear friends,
+                we invite you to be part of our
+                special celebration.
+
+            </p>
+
+            <p>
+
+                Your presence and blessings will
+                make this memorable occasion
+                even more special.
+
+            </p>
+
+            <div class="heart-line">
+                KOTI ♥ RADHIKA
+            </div>
+
+        </div>
+
+
+        <a
+            href="#details"
+            class="btn wedding-btn">
+
+            View Wedding Details →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PAGE 3
+====================================== -->
+
+<section id="details">
+
+    <div class="content">
+
+        <p class="subtitle">
+            SAVE THE DATE
+        </p>
+
+        <h1 class="heading">
+            Wedding Details
+        </h1>
+
+        <div class="heart-line">
+            ♥ ♥ ♥
+        </div>
+
+
+        <div class="container">
+
+            <div class="row g-4">
+
+
+                <!-- DATE -->
+
+                <div class="col-md-4">
+
+                    <div class="detail-card">
+
+                        <div class="detail-icon">
+                            📅
+                        </div>
+
+                        <h3>
+                            Wedding Date
+                        </h3>
+
+                        <p>
+                            26 June 2001
+                        </p>
+
+                        <small>
+                            A memorable day
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIME -->
+
+                <div class="col-md-4">
+
+                    <div class="detail-card">
+
+                        <div class="detail-icon">
+                            ⏰
+                        </div>
+
+                        <h3>
+                            Wedding Time
+                        </h3>
+
+                        <p>
+                            12:00
+                        </p>
+
+                        <small>
+                            Wedding Ceremony
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="col-md-4">
+
+                    <div class="detail-card">
+
+                        <div class="detail-icon">
+                            📍
+                        </div>
+
+                        <h3>
+                            Wedding Place
+                        </h3>
+
+                        <p>
+                            Tanuku
+                        </p>
+
+                        <small>
+                            Andhra Pradesh
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FAMILY WELCOME -->
+
+            <div class="family-card">
+
+                <h3>
+                    HEARTFELT WELCOME
+                </h3>
+
+                <p class="mt-3">
+
+                    Suri and Sharan Kumar
+
+                </p>
+
+                <p>
+
+                    warmly welcome you to join us
+                    and celebrate the beautiful
+                    beginning of Koti and Radhika's
+                    journey together.
+
+                </p>
+
+                <div class="family-heart">
+                    ❤️
+                </div>
+
+                <p>
+
+                    Your presence will make
+                    our celebration complete.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="#celebration"
+            class="btn wedding-btn">
+
+            Go to Celebration →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PAGE 4
+====================================== -->
+
+<section id="celebration">
+
+    <div class="content">
+
+        <p class="subtitle">
+            LET THE CELEBRATION BEGIN
+        </p>
+
+        <h1 class="heading">
+            Koti ♥ Radhika
+        </h1>
+
+        <div class="heart-line">
+            ♥ ♥ ♥
+        </div>
+
+
+        <div class="celebration-card">
+
+            <div class="main-heart">
+                ❤️
+            </div>
+
+            <h2>
+                HEARTFELT WELCOME
+            </h2>
+
+            <p class="mt-4">
+                Suri & Sharan Kumar
+            </p>
+
+            <p>
+                invite you to celebrate
+                the beautiful union of
+            </p>
+
+            <h3>
+                KOTI & RADHIKA
+            </h3>
+
+
+            <div class="date-box">
+
+                <strong>
+                    26 • 06 • 2001
+                </strong>
+
+                <br>
+
+                <span>
+                    12:00 • Tanuku
+                </span>
+
+            </div>
+
+
+            <button
+                class="btn wedding-btn"
+                onclick="celebrate()">
+
+                Celebrate With Us ❤️
+
+            </button>
+
+        </div>
+
+
+        <p id="message"></p>
+
+
+        <a
+            href="#home"
+            class="btn btn-outline-light mt-4">
+
+            ↑ Back to Home
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- Bootstrap -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<script>
+
+
+/* =====================================
+   OPEN INVITATION
+====================================== */
+
+function openInvitation() {
+
+    const card =
+        document.querySelector(".home-card");
+
+    card.style.transition = "0.8s";
+
+    card.style.transform =
+        "scale(1.08) rotateY(360deg)";
+
+    setTimeout(() => {
+
+        document
+            .getElementById("story")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+        card.style.transform =
+            "scale(1)";
+
+    }, 700);
+
+}
+
+
+
+/* =====================================
+   FLOATING HEARTS
+====================================== */
+
+const heartContainer =
+    document.getElementById("hearts");
+
+
+function createHeart() {
+
+    const heart =
+        document.createElement("span");
+
+    heart.className =
+        "floating-heart";
+
+    heart.innerHTML =
+        Math.random() > 0.2
+        ? "♥"
+        : "✦";
+
+    heart.style.left =
+        Math.random() * 100 + "%";
+
+    heart.style.fontSize =
+        (12 + Math.random() * 28) + "px";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 5) + "s";
+
+    heartContainer.appendChild(heart);
+
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    }, 9000);
+
+}
+
+
+setInterval(createHeart, 300);
+
+
+
+/* =====================================
+   CELEBRATION
+====================================== */
+
+function celebrate() {
+
+    const message =
+        document.getElementById("message");
+
+    message.innerHTML =
+        "✨ Thank you for being part of our special celebration! ❤️ ✨";
+
+    createConfetti();
+
+}
+
+
+
+/* =====================================
+   CONFETTI
+====================================== */
+
+function createConfetti() {
+
+    for (let i = 0; i < 120; i++) {
+
+        const piece =
+            document.createElement("span");
+
+        piece.className =
+            "confetti";
+
+        piece.innerHTML =
+            Math.random() > 0.5
+            ? "♥"
+            : "✦";
+
+        piece.style.left =
+            Math.random() * 100 + "vw";
+
+        piece.style.fontSize =
+            (10 + Math.random() * 25) + "px";
+
+        piece.style.animationDuration =
+            (2 + Math.random() * 4) + "s";
+
+        document.body.appendChild(piece);
+
+
+        setTimeout(() => {
+
+            piece.remove();
+
+        }, 6000);
+
+    }
+
+}
+
+
+
+/* =====================================
+   CARD REVEAL ANIMATION
+====================================== */
+
+const cards =
+    document.querySelectorAll(
+        ".story-card, .detail-card, .family-card"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.style.opacity = "1";
+
+                    entry.target.style.transform =
+                        "translateY(0)";
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.2
+        }
+    );
+
+
+cards.forEach(card => {
+
+    card.style.opacity = "0";
+
+    card.style.transform =
+        "translateY(50px)";
+
+    card.style.transition =
+        "1s ease";
+
+    observer.observe(card);
+
+});
+
+</script>
+
+
+</body>
+</html>
+```
